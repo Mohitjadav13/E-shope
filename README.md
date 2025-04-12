@@ -23,7 +23,6 @@ Access the application:
 
 1. Clone the repository:
 ```bash
-
 ```
 
 2. Install dependencies:
@@ -37,9 +36,7 @@ npm install
 npm run dev
 ```
 
-4. Access the application:
-   - Local Development: http://localhost:5173
-   - Production: https://my-ecommerce-mohit.netlify.app/
+4. Open http://localhost:5173 in your browser
 
 ## Test Account
 
@@ -72,7 +69,6 @@ my-ecommerce/
 - Session management
 
 ### Products
-- Grid layout display
 - Category filtering
 - Search functionality
 - Responsive product cards
