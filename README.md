@@ -48,19 +48,37 @@ Use these credentials to test the application:
 ## Project Structure
 
 ```
-my-ecommerce/
-├── src/
-│   ├── components/
-│   │   ├── Cart/
-│   │   ├── Header/
-│   │   ├── Login/
-│   │   ├── Products/
-│   │   └── ProductDetail/
-│   ├── App.jsx
-│   └── main.jsx
-├── public/
-└── package.json
+src/
+├── components/              # All components
+│   ├── Cart.jsx            # Shopping cart functionality
+│   ├── Cart.css            # Cart styles
+│   ├── Header.jsx          # Navigation component
+│   ├── Header.css          # Header styles
+│   ├── Login.jsx           # Authentication
+│   ├── Login.css           # Login styles
+│   ├── Products.jsx        # Product listing
+│   ├── Products.css        # Products styles
+│   ├── ProductDetail.jsx   # Single product view
+│   └── ProductDetail.css   # Product detail styles
+│
+├── App.jsx                 # Root component
+├── App.css                 # App styles
+├── index.css               # Global styles
+└── main.jsx               # Entry point
 ```
+
+The project follows a modular component-based architecture:
+
+- `components/` - Reusable UI components with their styles
+  - `Cart.jsx` - Shopping cart functionality
+  - `Header.jsx` - Navigation and search interface
+  - `Login.jsx` - Authentication system
+  - `Products.jsx` - Product listing and filtering
+  - `ProductDetail.jsx` - Individual product view
+
+- Root level files:
+  - `App.jsx` - Main application component
+  - `index.css` - Global styles
 
 ## Features in Detail
 
