@@ -23,6 +23,7 @@ Access the application:
 
 1. Clone the repository:
 ```bash
+https://github.com/Mohitjadav13/E-shope.git
 ```
 
 2. Install dependencies:
