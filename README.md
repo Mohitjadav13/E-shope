@@ -49,22 +49,22 @@ Use these credentials to test the application:
 
 ```
 src/
-├── components/              # All components
-│   ├── Cart.jsx            # Shopping cart functionality
-│   ├── Cart.css            # Cart styles
-│   ├── Header.jsx          # Navigation component
-│   ├── Header.css          # Header styles
-│   ├── Login.jsx           # Authentication
-│   ├── Login.css           # Login styles
-│   ├── Products.jsx        # Product listing
-│   ├── Products.css        # Products styles
-│   ├── ProductDetail.jsx   # Single product view
-│   └── ProductDetail.css   # Product detail styles
+├── components/              
+│   ├── Cart.jsx            
+│   ├── Cart.css            
+│   ├── Header.jsx          
+│   ├── Header.css          
+│   ├── Login.jsx           
+│   ├── Login.css           
+│   ├── Products.jsx       
+│   ├── Products.css        
+│   ├── ProductDetail.jsx   
+│   └── ProductDetail.css   
 │
-├── App.jsx                 # Root component
-├── App.css                 # App styles
-├── index.css               # Global styles
-└── main.jsx               # Entry point
+├── App.jsx                 
+├── App.css                 
+├── index.css               
+└── main.jsx               
 ```
 
 The project follows a modular component-based architecture:
