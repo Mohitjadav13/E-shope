@@ -40,20 +40,12 @@ function Header({ onSearch, showBackButton }) {
   }, [])
 
   const handleLogout = () => {
-    // Clear all auth-related data
+    // Remove both tokens on logout
     localStorage.removeItem('token')
-    localStorage.removeItem('user')
-    sessionStorage.clear()
-    
-    // Clear cart data
+    localStorage.removeItem('jwt_token')
     localStorage.removeItem('cart')
     setCartCount(0)
-    
-    // Dispatch auth change event
-    window.dispatchEvent(new Event('authChange'))
-    
-    // Use window.location for consistent behavior
-    window.location.href = '/login'
+    window.location.replace('/login')
   }
 
   const handleSearch = (e) => {

@@ -7,22 +7,17 @@ import Cart from './components/Cart'
 import './App.css'
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'))
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    () => !!localStorage.getItem('token')
+  )
 
   useEffect(() => {
-    const checkAuth = () => {
+    const handleAuthChange = () => {
       setIsAuthenticated(!!localStorage.getItem('token'))
     }
 
-    // Listen for storage changes
-    window.addEventListener('storage', checkAuth)
-    // Custom event for auth changes
-    window.addEventListener('authChange', checkAuth)
-
-    return () => {
-      window.removeEventListener('storage', checkAuth)
-      window.removeEventListener('authChange', checkAuth)
-    }
+    window.addEventListener('storage', handleAuthChange)
+    return () => window.removeEventListener('storage', handleAuthChange)
   }, [])
 
   return (

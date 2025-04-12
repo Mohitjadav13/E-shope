@@ -22,9 +22,10 @@ function Login() {
       const data = await response.json()
       
       if (data && data.token) {
+        // Store JWT token in localStorage
+        localStorage.setItem('jwt_token', data.token)
         localStorage.setItem('token', data.token)
-        window.dispatchEvent(new Event('authChange'))
-        window.location.href = '/' // Force a full page reload
+        window.location.replace('/')
       } else {
         setError('Invalid credentials')
       }
