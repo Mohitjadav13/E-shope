@@ -15,16 +15,9 @@ A fully responsive React e-commerce application with product filtering, cart man
 
 ## Live Demo
 
-[View Demo](https://your-demo-link.com)
+Access the application:
+- Production: [View Live Demo](https://my-ecommerce-mohit.netlify.app/)
 
-## Tech Stack
-
-- React
-- React Router
-- Vite
-- FakeStore API
-- LocalStorage for Cart Management
-- CSS3 with Modern Features
 
 ## Getting Started
 
@@ -44,7 +37,9 @@ npm install
 npm run dev
 ```
 
-4. Open http://localhost:5173 in your browser
+4. Access the application:
+   - Local Development: http://localhost:5173
+   - Production: https://my-ecommerce-mohit.netlify.app/
 
 ## Test Account
 
@@ -112,8 +107,6 @@ This project uses the [FakeStore API](https://fakestoreapi.com/) for:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-
 
 ## Acknowledgments
 
