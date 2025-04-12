@@ -106,7 +106,7 @@ This project uses the [FakeStore API](https://fakestoreapi.com/) for:
 
 ## Acknowledgments
 
-- [FakeStore API](https://fakestoreapi.com/)
+
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
 - [React Router](https://reactrouter.com/)
