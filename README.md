@@ -16,7 +16,7 @@ A fully responsive React e-commerce application with product filtering, cart man
 ## Live Demo
 
 Access the application:
-- Production: [View Live Demo](https://my-ecommerce-mohit.netlify.app/)
+- Production: [View Live Demo](https://e-shope-mohit.netlify.app/)
 
 
 ## Getting Started
