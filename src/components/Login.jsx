@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'  // Make sure to use react-router for navigation
+import { useState } from 'react'
 import './Login.css'
 
 function Login() {
@@ -7,15 +6,6 @@ function Login() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
-  const navigate = useNavigate()
-
-  // Check if user is already logged in by checking the token
-  useEffect(() => {
-    const token = localStorage.getItem('token')
-    if (token) {
-      navigate('/')  // Redirect to home if token exists (user is logged in)
-    }
-  }, [navigate])  // Add navigate to dependencies to avoid infinite loop
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -30,11 +20,11 @@ function Login() {
       })
 
       const data = await response.json()
-
+      
       if (data && data.token) {
-        localStorage.setItem('token', data.token)  // Store JWT token
-        window.dispatchEvent(new Event('authChange'))  // Optionally trigger auth change event
-        navigate('/')  // Navigate to home page after successful login
+        localStorage.setItem('token', data.token)
+        window.dispatchEvent(new Event('authChange'))
+        window.location.href = '/' // Force a full page reload
       } else {
         setError('Invalid credentials')
       }
@@ -44,12 +34,6 @@ function Login() {
     } finally {
       setIsLoading(false)
     }
-  }
-
-  const handleLogout = () => {
-    localStorage.removeItem('token')  // Clear JWT token from localStorage
-    window.dispatchEvent(new Event('authChange'))  // Optionally trigger auth change event
-    navigate('/login')  // Redirect to login page after logout without reloading
   }
 
   return (
@@ -136,11 +120,6 @@ function Login() {
         <div className="register-link">
           Don't have an account?<a href="#">Register here</a>
         </div>
-
-       
-        <button onClick={handleLogout} className="logout-button">
-          Log Out
-        </button>
       </div>
     </div>
   )
